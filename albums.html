@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/uncharted_icon_197929.ico">
+    <link rel="stylesheet" href="styles.css" >
+    <title>Альбомы</title>
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-a">
+            <a href="index.html">Главная</a>
+            <s>Альбомы</s>
+            <a href="sostav.html">Биография</a>
+            <a href="concert.html">Расписание концертов</a>
+        </div>
+    </nav>
+    <canvas class="effekt-dozhdya"></canvas>
+    <main>
+        <div class="swiper">
+            <h1 class="text-albums">Альбомы</h1>
+            <h2 class="text-single">Cинглы</h2>
+        </div>
+
+        <div class="albums">
+            <div class="new-albums">
+                <div class="album-image">
+
+                    <img src="images/bipolar.jpg" alt="альбом биполяр" id="1">
+                    <h3 class="bipolar">"Байполар"</h3>
+                </div>
+                <div class="album-image">
+
+                    <img src="images/your_eyes.jpg" alt="когда ты откроешь глаза" id="2">
+                    <h3 class="your_eyes">"Когда ты откроешь глаза"</h3>
+                </div>
+            </div>
+            <div class="old-albums">
+                <div class="album-image">
+
+                    <img src="images/maloletki.jpg" alt="альбом малолетки" id="3">
+                    <h3 class="maloletki">"Малолетки"</h3>
+
+                </div>
+                <div class="album-image">
+
+                    <img src="images/pepel.jpg" alt="альбом пепел" id="4">
+                    <h3 class="pepel">"Пепел"</h3>
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://t.me/everydayrain">
+                    <img src="images/favicon-32x32.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://vk.com/everydayrainagain">
+                    <img src="images/vk.png" alt="vk">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/every_day_rain/?hl=ru">
+                    <img src="images/insta.JPG">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+
+        function random(min, max) {
+
+            var rand = min + Math.random() * (max + 1 - min);
+            rand = Math.floor(rand);
+
+            return rand;
+
+        }
+
+        function rain() {
+
+            for (var i=0; i<200; i++) {
+
+                document.getElementsByTagName('body')[0].innerHTML += '<i class="rain" style="left: '+random(-2000, 2000)+'px;transform: translate3d(0, 0, 0);animation-delay: '+(0.01 * i)+'s"></i>';
+
+            }
+
+        }
+
+        rain()
+
+
+
+
+    </script>
+    <script>
+        const textAlbums = document.querySelector('.text-albums'),
+              textSingle = document.querySelector('.text-single'),
+              image1 = document.getElementById('1'),
+            image2 = document.getElementById('2'),
+            image3 = document.getElementById('3'),
+            image4 = document.getElementById('4')
+
+
+        let flag = true
+
+        function swiper(){
+
+            if (flag){
+                textSingle.innerHTML = 'Альбомы'
+                textAlbums.innerHTML = 'Cинглы'
+                image1.src = "images/part_of_me.jpg"
+                image2.src = "images/fault.jpg"
+                image3.src = "images/my_friends.jpg"
+                image4.src = "images/demons.jpg"
+
+                flag = false
+            } else {
+                textSingle.innerHTML = 'Cинглы'
+                textAlbums.innerHTML = 'Альбомы'
+                image1.src = "images/bipolar.jpg"
+                image2.src = "images/your_eyes.jpg"
+                image3.src = "images/maloletki.jpg"
+                image4.src = "images/pepel.jpg"
+
+                flag = true
+            }
+        }
+
+        textSingle.addEventListener('click', ()=>{
+            swiper()
+
+        })
+
+    </script>
+</body>
+</html>

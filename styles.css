@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Stalinist+One&family=Yanone+Kaffeesatz:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Unbounded:wght@300 & display=swap');
+
+*{
+    cursor: default;
+}
+
+body {
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    background: radial-gradient(rgba(73, 9, 16,.9), rgba(28, 13, 14, .9)), url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612900507_34-p-fon-krasnoi-luni-41.jpg);
+}
+
+.menua {
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+}
+
+.menu-a {
+    padding-top: 30px; /* Значение полей */
+    background-color: rgba(0, 0, 0, 0.29);
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 80%);
+
+}
+
+.questionnaire button{
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    color: #c7c7c7;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-results{
+    background-color: rgb(28, 13, 14);
+}
+
+.btn-results:hover{
+
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.05);
+}
+
+.btn-vote{
+    background-color: #490910;
+}
+
+.btn-vote:hover{
+
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.05);
+}
+
+.menu a {
+    display: inline;
+    text-decoration:none;
+    margin-right: 20%;
+    margin-left: 40px;
+    height: 35px;
+    color: #7e8291;
+    font-size: 20px;
+
+
+}
+
+.menu a:last-child{
+    margin-right: 0;
+}
+
+.menu a:hover{
+    opacity: .3;
+    cursor: pointer;
+}
+
+.info-card{
+    display: table;
+}
+
+.start{
+    display: table-cell;
+    width: auto;
+    height: auto;
+
+}
+
+.text-card{
+
+    height: 500px;
+    display: table-cell;
+    vertical-align: top;
+    color: #7e8291;
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+.text-card h1{
+    font-family: 'Comfortaa', cursive;
+    margin-right: 30px;
+    font-size: 48px;
+    text-align: right;
+    margin-bottom: 30px;
+
+
+}
+
+.album{
+    height: 380px;
+    display: flex;
+    padding: 20px;
+    border: 2px solid #7e8291;
+    border-bottom: none;
+    border-top: none;
+
+}
+
+.album .active{
+    animation: aroundAnimation 5s linear infinite;
+}
+
+.album-name{
+    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://thumbs.dreamstime.com/b/gray-ash-texture-cinder-grey-ashes-paper-use-background-wallpaper-black-white-contrast-grainy-gray-ash-171737487.jpg);
+
+    display: flex;
+    border: 2px solid #7e8291;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+
+}
+
+.album-name h6{
+    margin-left: 37%;
+    margin-right: 50%;
+    font-size: 20px;
+    white-space: nowrap;
+
+}
+
+
+i{
+    padding-right: 7px;
+}
+
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+
+    display: flex;
+    z-index: 1;
+    margin-top: -87px;
+
+
+}
+
+
+.album-info ul{
+    padding-right: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.album-info li{
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.album-info .play{
+    padding: 5px 5px 5px 10px;
+    cursor: pointer;
+    border: 2px solid #7e8291;
+    border-radius: 25px;
+
+}
+
+
+.album-info li:first-child:hover{
+    padding: 0;
+    cursor:default;
+    border:none;
+    border-radius: 0;
+}
+
+
+.album-info li:nth-child(12){
+    text-align: left;
+}
+
+.new img{
+
+    width: 350px;
+    height: 350px;
+    border: 3px solid #7e8291;
+    border-radius: 100%;
+
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.listening{
+    display: flex;
+    z-index: 2;
+    position: relative;
+    border: 2px solid #7e8291;
+    border-radius: 0 0 50px 50px;
+    border-top:none;
+    padding:20px;
+    font-size: 15px;
+
+}
+
+.listening p{
+    padding-left: 35px;
+
+}
+
+.listening a{
+    text-decoration:none;
+}
+
+.listening img{
+    border:none;
+    width: 35px;
+    height: 35px;
+    margin-left: 70px;
+}
+
+i:hover{
+    opacity: .3;
+}
+
+
+
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background: linear-gradient(black , #a4a4a4, rgb(38,11,14), rgb(38,11,14)), url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612900507_34-p-fon-krasnoi-luni-41.jpg);
+
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0) 50%, rgb(0, 0, 0)) 50%;
+}
+
+audio{
+    display: none;
+}
+
+@keyframes aroundAnimation {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.author-words{
+    background:linear-gradient(black 1%, rgba(0, 0, 0, 0.56) 50%, rgba(255, 255, 255, 0.38)), url(https://www.16tons.ru/events/pressimages/220504-tri_dnya_dozhdya_800x700_1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+
+}
+
+.author-words .left{
+    margin: 0 0 0 110px;
+    font-family: Comfortaa,sans-serif;
+    font-size: 20px;
+    padding-top:100px ;
+    text-align: left;
+    color: bisque;
+}
+
+.author-words .right{
+    margin: 0 110px 0 0;
+    font-family: Comfortaa,sans-serif;
+    font-size: 20px;
+    padding-top:100px ;
+    text-align: right;
+    color: bisque;
+}
+
+.author-words h2{
+    text-align: center;
+    margin: 0;
+    padding-top: 70px;
+    color: lightgoldenrodyellow;
+    font-size: 70px;
+
+
+}
+
+.author-text-left {
+    display: flex;
+    margin-left: 95px;
+    margin-top: -45px;
+    font-size: 25px;
+    padding: 15px;
+    width: 33%;
+    height: auto;
+    border: 2px solid rgba(28, 2, 2, 0.45);
+    border-radius: 25px;
+    color:bisque;
+    justify-content: space-between;
+    z-index: 2;
+
+}
+
+.card-right{
+    display: flex;
+    justify-content: right;
+}
+
+.author-text-right {
+    justify-content:space-between;
+    margin-top: -45px;
+    margin-right: 95px;
+    font-size: 25px;
+    padding: 15px;
+    width: 33%;
+    height: auto;
+    border: 2px solid rgba(28, 2, 2, 0.45);
+    border-radius: 25px;
+    color:bisque;
+
+    z-index: 2;
+}
+
+.author-media-left{
+    padding-top: 20px;
+    margin-left: 15px;
+    z-index: 1;
+    display: flex;
+
+
+}
+
+.author-media-right{
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+    margin-left: 15px;
+    z-index: 1;
+
+
+}
+
+.author-media-left p{
+    color: white;
+    margin-top: 60px;
+    margin-left: 35px;
+    visibility: hidden;
+}
+
+.author-media-right p{
+    display: flex;
+    justify-content: left;
+    color: white;
+    visibility: hidden;
+}
+
+.author-media-left img{
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+.author-media-right img{
+    margin-right: 15px;
+    justify-content: right;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+s{
+    display: inline;
+    margin-right: 20%;
+    margin-left: 40px;
+    height: 35px;
+    color: #7e8291;
+    font-size: 20px;
+    cursor: not-allowed;
+}
+
+s:last-child{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.bio-page{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 60px;
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.77);
+    margin-left: 13%;
+    margin-right:13%;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+.table-image{
+    display: flex;
+}
+
+.bio-page img{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 65%;
+    height: 65%;
+}
+
+.bio-page p{
+    margin: 15px auto;
+}
+
+p b{
+    text-shadow:
+            -1px -1px #000,
+            0 1px 0 #444;
+    text-decoration: none;
+    font-size: 130%;
+    color: #490910;
+    font-family: Comfortaa,sans-serif;
+    word-spacing: -5px;
+}
+
+footer{
+    height: 50px;
+    background:radial-gradient(rgba(0, 0, 0, 0.9) 99%, rgba(255, 255, 255, 0.9) 1%);
+}
+
+.table-info{
+    background-color: rgba(152, 136, 121, 0.7);
+    font-size: 20px;
+    border-top-left-radius: 15px;
+    padding: 0;
+    border-bottom-left-radius: 15px;
+
+    text-align: center;
+
+}
+
+.info{
+    margin-left:42%;
+}
+
+.chet{
+
+    padding: 8px;
+    background-color: rgba(73, 9, 16, 0.95);
+    color: #a4a4a4;
+    text-align: right;
+}
+
+.fist-td{
+    border-top-left-radius: 15px;
+}
+
+.last-td{
+    border-bottom-left-radius: 15px;
+}
+
+.ne-chet{
+
+    padding: 8px;
+    color: #7e8291;
+    background-color: rgba(28, 13, 14, 0.95);
+    text-align: right;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background:linear-gradient(black 1%, rgba(0, 0, 0, 0.56) 50%, rgb(0, 0, 0)), url("https://gamerwall.pro/uploads/posts/2022-03/1648017685_1-gamerwall-pro-p-stilnii-chernii-fon-krasivie-1.jpg");
+}
+
+footer ul{
+
+    display: flex;
+    list-style-type: none;
+}
+
+footer ul li img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.albums{
+    margin-left: 17%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+.albums img{
+    margin: 40px;
+    height: 350px;
+    width: 350px;
+    border: 2px solid #7e8291;
+}
+
+.albums img:hover{
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.05);
+}
+
+.new-albums{
+    display: flex;
+}
+
+.old-albums{
+    display: flex;
+}
+
+.album-image{
+    display: block;
+    margin: 0 20px 20px 20px;
+}
+
+.album-image h3{
+    padding: 20px;
+    font-size: 20px;
+    color: #7e8291;
+    margin: 0 20px 20px 20px;
+}
+
+.bipolar{
+
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom: 2px solid #7e8291;
+    border-right: 2px solid #7e8291;
+    border-left: 2px solid #7e8291;
+
+}
+
+.your_eyes{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom:2px solid #7e8291;
+    border-left:2px solid #7e8291;
+    border-right:2px solid #7e8291;
+}
+
+.maloletki{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom:2px solid #7e8291;
+    border-right: 2px solid #7e8291;
+    border-left: 2px solid #7e8291;
+}
+
+.pepel{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: 2px solid #7e8291;
+    border-left: 2px solid #7e8291;
+    border-right:2px solid #7e8291;
+}
+
+
+canvas{
+    display: none;
+}
+
+.rain {
+    position: fixed;
+    width: 1px; /* Ширина капли */
+    height: 5px; /* Высота капли */
+    top: -3px;
+    background-color: rgba(0, 0, 0, 0.9); /* Цвет капли */
+    animation: rain 1.2s linear infinite;
+    z-index: 99;
+    border-radius: 1px;
+}
+
+@keyframes rain {
+    to {
+        transform: translate3d(200px, 1000px, 0); /* Первое значение (200px) это направление дождя, где: 0 - вниз, положительное число - вправо, отрицательное - влево */
+    }
+}
+
+main h1{
+    color: #7e8291;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.swiper{
+    margin-left: 47%;
+    display: flex;
+    text-align: center;
+}
+
+.swiper h2:hover{
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.15);
+
+}
+
+.gvozd-image{
+    display: flex;
+    align-content: center;
+}
+
+.gvozd-image img{
+    width: 65px;
+    height: 60px;
+
+}
+
